@@ -14,24 +14,24 @@ This is the keymap for CS+SS+key combinations:
              Save        Vers  hRes  sRes
 ```
 
-Mode: By default is ZX Spectrum but can be changed to other modes pressing
+**Mode**: By default is ZX Spectrum but can be changed to other modes pressing
       next key after CS+SS+U:
 ```
-      0: ZX     1: CPC    2: MSX    3: C64    4: AT4    5: BBC    6: ACO
-      7: AP2    8: VIC    9: PC     A: ORI    B: SAM    C: JUP
+0: ZX     1: CPC    2: MSX    3: C64    4: AT4    5: BBC    6: ACO
+7: AP2    8: VIC    9: PC     A: ORI    B: SAM    C: JUP
 ```
-      Starting on ZX Spectrum mode by default
+Starting on ZX Spectrum mode by default
 
-SLok: Scroll Lock to switch between VGA and PAL on ZX-Uno core. For ZX Next
+**SLok**: Scroll Lock to switch between VGA and PAL on ZX-Uno core. For ZX Next
       core press CS+SS+2 (F2) instead
 
-Save: Save mode in EEPROM
+**Save**: Save mode in EEPROM
 
-Vers: Prints version number
+**Vers**: Prints version number
 
-hRes: Hard Reset for ZX-Uno: Control+Alt+Backsp
+**hRes**: Hard Reset for ZX-Uno: Control+Alt+Backsp
 
-sRes: Soft Reset for ZX-Uno: Control+Alt+Supr
+**sRes**: Soft Reset for ZX-Uno: Control+Alt+Supr
 
 For different ZX Spectrum combinations see this table:
 
