@@ -16,8 +16,10 @@ This is the keymap for CS+SS+key combinations:
 
 Mode: By default is ZX Spectrum but can be changed to other modes pressing
       next key after CS+SS+U:
+```
       0: ZX     1: CPC    2: MSX    3: C64    4: AT4    5: BBC    6: ACO
       7: AP2    8: VIC    9: PC     A: ORI    B: SAM    C: JUP
+```
       Starting on ZX Spectrum mode by default
 
 SLok: Scroll Lock to switch between VGA and PAL on ZX-Uno core. For ZX Next
