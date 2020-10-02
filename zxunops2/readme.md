@@ -1,5 +1,6 @@
 This is the keymap for CS+SS+key combinations:
 
+```
 [ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ 7 ] [ 8 ] [ 9 ] [ 0 ]  
  F1    F2    F3    F4    F5    F6    F7    F8    F9    F10
 
@@ -11,6 +12,7 @@ This is the keymap for CS+SS+key combinations:
 
 [CS ] [ Z ] [ X ] [ C ] [ V ] [ B ] [ N ] [ M ] [SS ] [ SPC ]
              Save        Vers  hRes  sRes
+```
 
 Mode: By default is ZX Spectrum but can be changed to other modes pressing
       next key after CS+SS+U:
@@ -29,4 +31,6 @@ hRes: Hard Reset for ZX-Uno: Control+Alt+Backsp
 
 sRes: Soft Reset for ZX-Uno: Control+Alt+Supr
 
-For different ZX Spectrum combinations see table at combos.png
+For different ZX Spectrum combinations see this table:
+
+![combos](combos.png?raw=true "combos")
