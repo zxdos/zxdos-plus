@@ -762,8 +762,6 @@ void sueltateclaconshift(unsigned char row, unsigned char col, unsigned char key
     }
 }
 
-
-
 void matrixScan()
 {
     uint8_t r, c;
@@ -772,7 +770,6 @@ void matrixScan()
     fnpulsada = 0; //Se pone a 0 la pulsacion de una tecla de funcion
 
     rescan:
-
     //Escaneo de la matriz del teclado
     if (!fnpulsada) for (r = 0; r<ROWS; r++)
     {
@@ -846,7 +843,7 @@ void matrixScan()
 				if (matriz[H_L_ROW][L_COL] & 0x01) kbalt = 1; // Modo Alt activado para F1 - F12
 				_delay_ms(200);
 			}
-			if ((matriz[Y_P_ROW][U_COL] & 0x01) && modo)
+			if (matriz[Y_P_ROW][U_COL] & 0x01)
 			{
 				kbescucha = 0;
 				cambiomodo = 1; fnpulsada = 1; soltarteclas = 1;				
@@ -856,19 +853,19 @@ void matrixScan()
 			{
  
 				//Activa el cambio de modo lo que dejara en bucle hasta que se pulse una tecla. El led se enciende.
-				if ((matriz[N1_N5_ROW][N1_COL] & 0x01)) pulsafn(N1_N5_ROW, N1_COL, KEY_F1, 0, 0, 0, 0, 5);  //F1
-				if ((matriz[N1_N5_ROW][N2_COL] & 0x01)) pulsafn(N1_N5_ROW, N2_COL, KEY_F2, 0, 0, 0, 0, 5);  //F2
-				if ((matriz[N1_N5_ROW][N3_COL] & 0x01)) pulsafn(N1_N5_ROW, N3_COL, KEY_F3, 0, 0, 0, 0, 5);  //F3
-				if ((matriz[N1_N5_ROW][N4_COL] & 0x01)) pulsafn(N1_N5_ROW, N4_COL, KEY_F4, 0, 0, 0, 0, 5);  //F4
-				if ((matriz[N1_N5_ROW][N5_COL] & 0x01)) pulsafn(N1_N5_ROW, N5_COL, KEY_F5, 0, 0, 0, 0, 5);  //F5
-				if ((matriz[N6_N0_ROW][N6_COL] & 0x01)) pulsafn(N6_N0_ROW, N6_COL, KEY_F6, 0, 0, 0, 0, 5);  //F6 
-				if ((matriz[N6_N0_ROW][N7_COL] & 0x01)) pulsafn(N6_N0_ROW, N7_COL, KEY_F7, 0, 0, 0, 0, 5);  //F7
-				if ((matriz[N6_N0_ROW][N8_COL] & 0x01)) pulsafn(N6_N0_ROW, N8_COL, KEY_F8, 0, 0, 0, 0, 5);  //F8
-				if ((matriz[N6_N0_ROW][N9_COL] & 0x01)) pulsafn(N6_N0_ROW, N9_COL, KEY_F9, 0, 0, 0, 0, 5);  //F9
-				if ((matriz[N6_N0_ROW][N0_COL] & 0x01)) pulsafn(N6_N0_ROW, N0_COL, KEY_F10, 0, 0, 0, 0, 5); //F10
+				if (matriz[N1_N5_ROW][N1_COL] & 0x01) pulsafn(N1_N5_ROW, N1_COL, KEY_F1, 0, 0, 0, 0, 5);  //F1
+				if (matriz[N1_N5_ROW][N2_COL] & 0x01) pulsafn(N1_N5_ROW, N2_COL, KEY_F2, 0, 0, 0, 0, 5);  //F2
+				if (matriz[N1_N5_ROW][N3_COL] & 0x01) pulsafn(N1_N5_ROW, N3_COL, KEY_F3, 0, 0, 0, 0, 5);  //F3
+				if (matriz[N1_N5_ROW][N4_COL] & 0x01) pulsafn(N1_N5_ROW, N4_COL, KEY_F4, 0, 0, 0, 0, 5);  //F4
+				if (matriz[N1_N5_ROW][N5_COL] & 0x01) pulsafn(N1_N5_ROW, N5_COL, KEY_F5, 0, 0, 0, 0, 5);  //F5
+				if (matriz[N6_N0_ROW][N6_COL] & 0x01) pulsafn(N6_N0_ROW, N6_COL, KEY_F6, 0, 0, 0, 0, 5);  //F6 
+				if (matriz[N6_N0_ROW][N7_COL] & 0x01) pulsafn(N6_N0_ROW, N7_COL, KEY_F7, 0, 0, 0, 0, 5);  //F7
+				if (matriz[N6_N0_ROW][N8_COL] & 0x01) pulsafn(N6_N0_ROW, N8_COL, KEY_F8, 0, 0, 0, 0, 5);  //F8
+				if (matriz[N6_N0_ROW][N9_COL] & 0x01) pulsafn(N6_N0_ROW, N9_COL, KEY_F9, 0, 0, 0, 0, 5);  //F9
+				if (matriz[N6_N0_ROW][N0_COL] & 0x01) pulsafn(N6_N0_ROW, N0_COL, KEY_F10, 0, 0, 0, 0, 5); //F10
 
-				if ((matriz[Q_T_ROW][Q_COL] & 0x01)) pulsafn(Q_T_ROW, Q_COL, KEY_F11, 0, 0, 0, 0, 50); //F11  
-				if ((matriz[Q_T_ROW][W_COL] & 0x01)) pulsafn(Q_T_ROW, W_COL, KEY_F12, 0, 0, 0, 0, 50); //F12  
+				if (matriz[Q_T_ROW][Q_COL] & 0x01) pulsafn(Q_T_ROW, Q_COL, KEY_F11, 0, 0, 0, 0, 50); //F11  
+				if (matriz[Q_T_ROW][W_COL] & 0x01) pulsafn(Q_T_ROW, W_COL, KEY_F12, 0, 0, 0, 0, 50); //F12  
 
 				if ((matriz[A_G_ROW][S_COL] & 0x01) && modo)
 				{
@@ -895,13 +892,12 @@ void matrixScan()
 						pulsafn(A_G_ROW, S_COL, KEY_F12, 0, 0, 1, 0, 5);
 					}
 				}
+				if (matriz[B_M_ROW][B_COL] & 0x01) pulsafn(B_M_ROW, B_COL, KEY_BACKSP, 0, 0, 1, 1, 5);    //ZXUNO Hard Reset (Control+Alt+Backsp)
+				if (matriz[B_M_ROW][N_COL] & 0x01) pulsafn(B_M_ROW, N_COL, KEY_DELETE, 0, 0, 1, 1, 5);    //ZXUNO Soft Reset (Control+Alt+Supr)
+				if (matriz[A_G_ROW][G_COL] & 0x01) pulsafn(A_G_ROW, G_COL, KEY_SCRLCK, 0, 0, 0, 0, 5);    //ZXUNO RGB/VGA Swich (Bloq Despl)
 
-				if ((matriz[B_M_ROW][B_COL] & 0x01) && modo) pulsafn(B_M_ROW, B_COL, KEY_BACKSP, 0, 0, 1, 1, 5);    //ZXUNO Hard Reset (Control+Alt+Backsp)
-				if ((matriz[B_M_ROW][N_COL] & 0x01) && modo) pulsafn(B_M_ROW, N_COL, KEY_DELETE, 0, 0, 1, 1, 5);    //ZXUNO Soft Reset (Control+Alt+Supr)
-				if ((matriz[A_G_ROW][G_COL] & 0x01) && modo) pulsafn(A_G_ROW, G_COL, KEY_SCRLCK, 0, 0, 0, 0, 5);    //ZXUNO RGB/VGA Swich (Bloq Despl)
-
-				if ((matriz[Z_V_ROW][V_COL] & 0x01) && modo) imprimeversion();
-				if ((matriz[Z_V_ROW][X_COL] & 0x01) && modo) eepromsave();										  //Guarda en la EEPROM el modo actual de teclado
+				if (matriz[Z_V_ROW][V_COL] & 0x01) imprimeversion();
+				if (matriz[Z_V_ROW][X_COL] & 0x01) eepromsave();										  //Guarda en la EEPROM el modo actual de teclado
 
 				if ((matriz[Q_T_ROW][E_COL] & 0x01) && modo) pulsafn(Q_T_ROW, E_COL, KEY_PGUP, 1, 0, 0, 0, 5); //Re Pag / Pg Up   (Acorn: VGA) (C64 Disco Anterior)
 				if ((matriz[Q_T_ROW][R_COL] & 0x01) && modo) pulsafn(Q_T_ROW, R_COL, KEY_PGDW, 1, 0, 0, 0, 5); //Av Pag / Pg Down (Acorn: RGB) (C64 Disco Siguiente)
