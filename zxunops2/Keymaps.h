@@ -22,7 +22,7 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KEY_LCTRL   0x14
 #define KEY_LALT    0x11
 
-												//Especiales, requieren E0
+                        //Especiales, requieren E0
 #define KEY_RIGHT   0x74
 #define KEY_LEFT    0x6B
 #define KEY_DOWN    0x72
@@ -34,7 +34,7 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KEY_APPS    0x2F
 #define KEY_PGUP    0x7D
 #define KEY_PGDW    0x7A
-												//Fin Especiales
+                        //Fin Especiales
 
 #define KEY_A       0x1C
 #define KEY_B       0x32
@@ -97,8 +97,8 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KEY_TAB     0x0D
 
 #define KEY_TLD     0x0E //Izxda del 1
-#define KEY_MENOS	0x4E //Drcha del 0
-#define KEY_IGUAL	0x55 //Izda de Backspace
+#define KEY_MENOS 0x4E //Drcha del 0
+#define KEY_IGUAL 0x55 //Izda de Backspace
 #define KEY_ACORCHE 0x54 //Drcha de la P
 #define KEY_CCORCHE 0x5B //Siguiente a la de la Drcha de la P
 #define KEY_BKSLASH 0x5D //Izda del Enter (Puede estar en la fila de la P o de la L
@@ -109,7 +109,7 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KEY_SLASH   0x4A //Izda del Shift Derecho
 #define KEY_LESS    0x61 //Izda de la Z
 
-												//SCANCODES SET 1
+                        //SCANCODES SET 1
 #define KS1_RELEASE 0x80 //Valor que se suma al codeigo de la tecla para soltarla
 #define KS1_ESCAPE 0x01
 #define KS1_DELETE 0x53
@@ -119,7 +119,7 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KS1_LCTRL   0x1D
 #define KS1_LALT    0x38
 
-												//Especiales, requieren E0
+                        //Especiales, requieren E0
 #define KS1_RIGHT   0x4D
 #define KS1_LEFT    0x4B
 #define KS1_DOWN    0x50
@@ -138,7 +138,7 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KS1_END     0x4F
 #define KS1_INS     0x52
 #define KS1_DEL     0x53
-												//Fin Especiales
+                        //Fin Especiales
 
 #define KS1_A       0x1E
 #define KS1_B       0x30
@@ -201,8 +201,8 @@ const uint8_t rama[1] = { 1 }; // Rama del firmware (1: Original, 2: Alternativa
 #define KS1_TAB     0x0F
 
 #define KS1_TLD     0x29 //Izxda del 1
-#define KS1_MENOS	0x0C //Drcha del 0
-#define KS1_IGUAL	0x0D //Izda de Backspace
+#define KS1_MENOS 0x0C //Drcha del 0
+#define KS1_IGUAL 0x0D //Izda de Backspace
 #define KS1_ACORCHE 0x1A //Drcha de la P
 #define KS1_CCORCHE 0x1B //Siguiente a la de la Drcha de la P
 #define KS1_BKSLASH 0x2B //Izda del Enter (Puede estar en la fila de la P o de la L
@@ -304,34 +304,34 @@ const uint8_t mapSET1[ROWS][COLS] = { //MAPA Codeset 1
 {  KS1_SPACE,          0,      KS1_M,      KS1_N,      KS1_B }
 };
 const uint8_t mapEXT1[ROWS8][COLS5] = { //Mapa especial con caps shift para Codeset1(Igual en todos los Keymaps)
-	{ KS1_F2,	  KS1_CAPS,			 0,		  0,   KS1_LEFT },
-	{ 0,				 0,			 0,       0,          0 },
-	{ 0,				 0,			 0,       0,          0 },
-	{ KS1_BACKSP,		 0,  KS1_RIGHT,		  0,   KS1_DOWN },
-	{ 0,				 0,			 0,       0,          0 },
-	{ 0,				 0,			 0,       0,          0 },
-	{ KS1_TAB,			 0,			 0,       0,		  0 },
-	{ KS1_ESCAPE,		 0,			 0,       0,		  0 }
+  { KS1_F2,   KS1_CAPS,      0,     0,   KS1_LEFT },
+  { 0,         0,      0,       0,          0 },
+  { 0,         0,      0,       0,          0 },
+  { KS1_BACKSP,    0,  KS1_RIGHT,     0,   KS1_DOWN },
+  { 0,         0,      0,       0,          0 },
+  { 0,         0,      0,       0,          0 },
+  { KS1_TAB,       0,      0,       0,      0 },
+  { KS1_ESCAPE,    0,      0,       0,      0 }
 };
 const uint8_t mapXT1[ROWS8][COLS5] = { //Mapa de PC-XT CodeSet1 pulsando Control (symbol shift)
-	{ KS1_1,			  KS1_2,          KS1_3,          KS1_4,         KS1_5 },
-	{ 0,					  0,              0,       KS1_COMA,     KS1_PUNTO },
-	{ KS1_TLD,		KS1_BKSLASH,    KS1_BKSLASH,    KS1_ACORCHE,   KS1_CCORCHE },
-	{ KS1_MENOS,		  KS1_0,          KS1_9,    KS1_COMILLA,	     KS1_7 },
-	{ KS1_COMILLA,  KS1_CCORCHE,              0,    KS1_CCORCHE,   KS1_ACORCHE },
-	{ 0,		    KS1_PTOCOMA,              0,      KS1_SLASH,     KS1_SLASH },
-	{ 0,		      KS1_IGUAL,      KS1_IGUAL,      KS1_MENOS,	     KS1_6 },
-	{ 0,					  0,      KS1_PUNTO,       KS1_COMA,		 KS1_8 }
+  { KS1_1,        KS1_2,          KS1_3,          KS1_4,         KS1_5 },
+  { 0,            0,              0,       KS1_COMA,     KS1_PUNTO },
+  { KS1_TLD,    KS1_BKSLASH,    KS1_BKSLASH,    KS1_ACORCHE,   KS1_CCORCHE },
+  { KS1_MENOS,      KS1_0,          KS1_9,    KS1_COMILLA,       KS1_7 },
+  { KS1_COMILLA,  KS1_CCORCHE,              0,    KS1_CCORCHE,   KS1_ACORCHE },
+  { 0,        KS1_PTOCOMA,              0,      KS1_SLASH,     KS1_SLASH },
+  { 0,          KS1_IGUAL,      KS1_IGUAL,      KS1_MENOS,       KS1_6 },
+  { 0,            0,      KS1_PUNTO,       KS1_COMA,     KS1_8 }
 };
 const uint8_t modXT1[ROWS8][COLS5] = { //Mod de PC-XT CodeSet1 1 hay q usar Shift, 0 no hay que usar
-	{ 1,              1,              1,              1,              1 },
-	{ 0,              0,              0,              1,              1 },
-	{ 1,              1,              0,              1,              1 },
-	{ 1,              1,              1,              0,              1 },
-	{ 1,              0,              0,              0,              0 },
-	{ 0,              1,              0,              1,              0 },
-	{ 0,              0,              1,              0,              1 },
-	{ 0,              0,              0,              0,              1 }
+  { 1,              1,              1,              1,              1 },
+  { 0,              0,              0,              1,              1 },
+  { 1,              1,              0,              1,              1 },
+  { 1,              1,              1,              0,              1 },
+  { 1,              0,              0,              0,              0 },
+  { 0,              1,              0,              1,              0 },
+  { 0,              0,              1,              0,              1 },
+  { 0,              0,              0,              0,              1 }
 };
 
 const uint8_t mapMODO[ROWS8][COLS5] = {
